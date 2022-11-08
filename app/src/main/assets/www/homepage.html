@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+    <style>
+        body {
+            margin-top: 25px
+           }
+        #row__click {
+            display: flex
+            flex-direction: row
+        }
+          .disable {
+        display: none;
+      }
+      #text {
+            background-color: black;
+            color: white;
+
+        }
+.digit-group input {
+    width: 40px;
+    height: 40px;
+    border: none;
+    line-height: 50px;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    color: black;
+    margin: 0 2px;
+    border-radius: 18px;
+    border: 3px solid #293886;
+  }
+
+.prompt {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: white;
+}
+
+::-webkit-input-placeholder {
+  /* Edge */
+  font-weight: 800;
+  color: #9c9a9a;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer */
+  font-weight: 800;
+  color: #9c9a9a;
+}
+
+::placeholder {
+  font-weight: 900;
+  color: #9c9a9a;
+}
+
+    .mt-5 {
+        margin-top: 30px;
+
+    }
+
+    </style>
+</head>
+<body>
+
+    <h2>Phone Number Retrieve</h2>
+<!--  <p id="num">Num Will be Here</p>-->
+
+  <div id="row__click">
+      <input type="text" id="numInput" placeholder="Phone Number" readonly />
+      <button id="btnNum">Get Number With Button</button>
+  </div>
+
+<p class="mt-5">Example Output if Get OTP</p>
+
+<form method="get" action="blog.html" class="digit-group" data-group-name="digits" data-autosubmit="false" autocomplete="off">
+    <input type="number" id="digit-1" name="digit-1" data-next="digit-2" placeholder="-" />
+    <input type="number" id="digit-2" name="digit-2" data-next="digit-3" data-previous="digit-1" placeholder="-" />
+    <input type="number" id="digit-3" name="digit-3" data-next="digit-4" data-previous="digit-2" placeholder="-" />
+    <input type="number" id="digit-4" name="digit-4" data-next="digit-5" data-previous="digit-3" placeholder="-" />
+    <input type="number" id="digit-5" name="digit-5" data-previous="digit-4" placeholder="-" />
+</form>
+
+
+
+<script src="cordova.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

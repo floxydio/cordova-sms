@@ -1,0 +1,53 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {
+      "res/xml/config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<feature name=\"SMSReceive\"><param name=\"android-package\" value=\"com.andreszs.smsreceive.SMSReceive\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "AndroidManifest.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<uses-feature android:name=\"android.hardware.telephony\" android:required=\"false\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.RECEIVE_SMS\" />",
+              "count": 1
+            }
+          ]
+        }
+      }
+    }
+  },
+  "installed_plugins": {
+    "cordova-plugin-sms-receive": {
+      "PACKAGE_NAME": "com.floxy.cordovasms"
+    }
+  },
+  "dependent_plugins": {},
+  "modules": [
+    {
+      "id": "cordova-plugin-sms-receive.SMSReceive",
+      "file": "plugins/cordova-plugin-sms-receive/www/SMSReceive.js",
+      "pluginId": "cordova-plugin-sms-receive",
+      "clobbers": [
+        "cordova.plugins.SMSReceive"
+      ]
+    }
+  ],
+  "plugin_metadata": {
+    "cordova-plugin-sms-receive": "2.0.0"
+  }
+}
